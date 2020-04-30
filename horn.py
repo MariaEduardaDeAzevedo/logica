@@ -47,9 +47,8 @@ def get_clausulas(expressao):
     return clausulas
 
 #Algoritmo para verificação da satisfatibilidade da fórmula Horn
-def horn(expressao):
-    print(expressao)
-    clausulas = get_clausulas(expressao)
+def horn(formula):
+    clausulas = get_clausulas(formula)
     expressao = list()
     marcados = list()
     for clausula in clausulas:
@@ -59,7 +58,6 @@ def horn(expressao):
     while not finalizado:
         finalizado = True
         for i in range(len(expressao)):
-
             proposicoes = get_proposicoes_atomicas(clausulas[i])
             for j in range(len(proposicoes)):
                 if proposicoes[j].strip() in marcados:
