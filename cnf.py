@@ -1,5 +1,9 @@
 #coding: utf-8
-
+'''
+Maria Eduarda de Azevedo Silva - 119110210
+Lógica 2020.1 - Professor Tiago Massoni
+Código para consultar validade de fórmula na CNF
+'''
 def encontra_proposicoes(string):
     proposicoes = set()
     for l in string:
